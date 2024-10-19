@@ -12,7 +12,7 @@ namespace Datos
 {
     public class SQLconexion
     {
-        static string StrConexion = "Server = DESKTOP-70EGJ4M\\SQLEXPRESS; database = Empresa; integrated security = true;";
+        static string StrConexion = "Server = MSI\\SQLEXPRESS; database = Empresa; integrated security = true;";
         SqlConnection Miconexion = new SqlConnection(StrConexion);
         public int iniciarSesion(string Usuario, string Clave)
         {
