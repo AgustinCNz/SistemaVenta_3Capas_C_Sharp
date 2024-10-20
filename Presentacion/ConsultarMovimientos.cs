@@ -23,16 +23,15 @@ namespace Presentacion
         private void ConsultarMovimientos_Load(object sender, EventArgs e)
         {
             SQLconexionNegocio con = new SQLconexionNegocio();
-            dataGridView1.DataSource = con.CargarMovimiento();
+            dataGridViewComprobantesEmitidos.DataSource = con.CargarMovimiento();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+        private void btnVolverAtras_Click(object sender, EventArgs e)
         {
             ABMProductos volver = new ABMProductos(empleadoIniciado);
             volver.Show();
             this.Hide();
-        }
 
- 
+        }
     }
 }

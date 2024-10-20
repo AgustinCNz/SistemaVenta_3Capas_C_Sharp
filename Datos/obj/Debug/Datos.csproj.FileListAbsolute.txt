@@ -10,9 +10,3 @@ C:\Users\Usuario\source\repos\3capas\Datos\obj\Debug\Datos.csproj.AssemblyRefere
 C:\Users\Usuario\source\repos\3capas\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\source\repos\3capas\Datos\obj\Debug\Datos.dll
 C:\Users\Usuario\source\repos\3capas\Datos\obj\Debug\Datos.pdb
-C:\Users\Gusti\source\repos\3capas\Datos\bin\Debug\Datos.dll
-C:\Users\Gusti\source\repos\3capas\Datos\bin\Debug\Datos.pdb
-C:\Users\Gusti\source\repos\3capas\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
-C:\Users\Gusti\source\repos\3capas\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
-C:\Users\Gusti\source\repos\3capas\Datos\obj\Debug\Datos.dll
-C:\Users\Gusti\source\repos\3capas\Datos\obj\Debug\Datos.pdb

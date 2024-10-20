@@ -83,6 +83,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap edit_5681246 {
+            get {
+                object obj = ResourceManager.GetObject("edit_5681246", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap left_arrow_10068022 {
             get {
                 object obj = ResourceManager.GetObject("left-arrow_10068022", resourceCulture);
@@ -96,6 +106,16 @@ namespace Presentacion.Properties {
         internal static System.Drawing.Bitmap lock_3624812 {
             get {
                 object obj = ResourceManager.GetObject("lock_3624812", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_5585939 {
+            get {
+                object obj = ResourceManager.GetObject("new_5585939", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

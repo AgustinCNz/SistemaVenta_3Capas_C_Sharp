@@ -93,11 +93,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
             this.label1.Location = new System.Drawing.Point(269, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(314, 40);
+            this.label1.Size = new System.Drawing.Size(295, 37);
             this.label1.TabIndex = 52;
             this.label1.Text = "Formulario empleado";
             // 

@@ -33,6 +33,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
+
         private void CompraProducto_Load(object sender, EventArgs e)
         {
             SQLconexionNegocio con = new SQLconexionNegocio();
@@ -143,7 +144,7 @@ namespace Presentacion
             return total;
         }
 
-        /* private void btnEmitirComprobante_Click(object sender, EventArgs e)
+       /*  private void btnEmitirComprobante_Click(object sender, EventArgs e)
          {           
                  try
                  {
@@ -192,8 +193,8 @@ namespace Presentacion
                  }
 
 
-         }
-        */
+         }*/
+        
 
 
 
@@ -278,5 +279,89 @@ namespace Presentacion
             volverMenuUsuario.Show();
             this.Hide();
         }
+
+
+
+        public class ComprobanteNegocio
+        {
+            public float CalcularTotal(List<Producto> productos, List<float> cantidades)
+            {
+                float total = 0;
+
+                for (int i = 0; i < productos.Count; i++)
+                {
+                    total += productos[i].PrecioCosto * cantidades[i];
+                }
+
+                return total;
+            }
+        }
+
+
+        private void btnEmitirComprobante_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear instancia de la capa de negocio y conexión
+                SQLconexionNegocio con = new SQLconexionNegocio();
+                ComprobanteNegocio comprobanteNegocio = new ComprobanteNegocio();
+
+                // Modificar los productos (actualizar stock)
+                int i = 0;
+                foreach (var pro in ListaProductos)
+                {
+                    float stockNuevo = pro.Stock + cantidades[i];
+                    con.ModificarUnproducto(pro.codigo, pro.NombreProducto, pro.NombreCorto, pro.PrecioCosto, stockNuevo, pro.StockMinimo, pro.PorcentajeGanancia);
+                    i++;
+                }
+
+                // Actualizar la tabla
+                dataGridView1.DataSource = con.CargarProducto();
+
+                // Convertir cantidades a float si es necesario
+                List<float> cantidadesFloat = cantidades.Select(c => (float)c).ToList();
+
+                // Calcular el monto total
+                float montoTotal = comprobanteNegocio.CalcularTotal(ListaProductos, cantidadesFloat);
+
+                // Guardar el comprobante en la base de datos
+                DateTime fechaHoy = DateTime.Now;
+                con.AgregarComprobante(int.Parse(txtNumeroFactura.Text), fechaHoy, empleadoIniciado.ID, montoTotal);
+               
+                // Mostrar un mensaje de éxito
+                string mensaje = $"Comprobante emitido:\n" +
+                                 $"Tipo: Factura\n" +
+                                 $"Fecha: {fechaHoy}\n" +
+                                 $"Empleado: {empleadoIniciado.ID}\n" +
+                                 $"Monto total: {montoTotal}";
+                
+
+                MessageBox.Show(mensaje, "Información del Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Limpiar los campos y listas
+                txtCantidad.Clear();
+                txtCodigo.Clear();
+                txtNumeroFactura.Clear();
+                txtPrecio.Clear();
+                lstCompra.Items.Clear();
+              
+                ListaProductos = null;
+                cantidades = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
     }
 }

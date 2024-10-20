@@ -66,5 +66,12 @@ namespace Presentacion
             Productos.Show();
             this.Hide();
         }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            VentaProducto vistaVenta= new VentaProducto(empleadoIniciado);
+            vistaVenta.Show();
+            this.Hide();
+        }
     }
 }

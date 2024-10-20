@@ -64,11 +64,11 @@ namespace Presentacion
             // lblcomprarproducto
             // 
             this.lblcomprarproducto.AutoSize = true;
-            this.lblcomprarproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcomprarproducto.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcomprarproducto.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblcomprarproducto.Location = new System.Drawing.Point(51, 57);
+            this.lblcomprarproducto.Location = new System.Drawing.Point(72, 12);
             this.lblcomprarproducto.Name = "lblcomprarproducto";
-            this.lblcomprarproducto.Size = new System.Drawing.Size(251, 31);
+            this.lblcomprarproducto.Size = new System.Drawing.Size(256, 37);
             this.lblcomprarproducto.TabIndex = 1;
             this.lblcomprarproducto.Text = "Comprar Producto";
             // 
@@ -77,7 +77,7 @@ namespace Presentacion
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCodigo.Location = new System.Drawing.Point(459, 95);
+            this.lblCodigo.Location = new System.Drawing.Point(544, 120);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(65, 21);
             this.lblCodigo.TabIndex = 2;
@@ -88,7 +88,7 @@ namespace Presentacion
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidad.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblCantidad.Location = new System.Drawing.Point(454, 153);
+            this.lblCantidad.Location = new System.Drawing.Point(539, 170);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(79, 21);
             this.lblCantidad.TabIndex = 3;
@@ -99,7 +99,7 @@ namespace Presentacion
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.SystemColors.Window;
-            this.lblPrecio.Location = new System.Drawing.Point(459, 204);
+            this.lblPrecio.Location = new System.Drawing.Point(544, 221);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(58, 21);
             this.lblPrecio.TabIndex = 4;
@@ -108,7 +108,7 @@ namespace Presentacion
             // txtCodigo
             // 
             this.txtCodigo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(539, 95);
+            this.txtCodigo.Location = new System.Drawing.Point(624, 117);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 29);
             this.txtCodigo.TabIndex = 5;
@@ -117,7 +117,7 @@ namespace Presentacion
             // txtPrecio
             // 
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.Location = new System.Drawing.Point(539, 204);
+            this.txtPrecio.Location = new System.Drawing.Point(624, 221);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 29);
             this.txtPrecio.TabIndex = 6;
@@ -125,7 +125,7 @@ namespace Presentacion
             // txtCantidad
             // 
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.Location = new System.Drawing.Point(539, 145);
+            this.txtCantidad.Location = new System.Drawing.Point(624, 162);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(100, 29);
             this.txtCantidad.TabIndex = 7;
@@ -137,9 +137,9 @@ namespace Presentacion
             this.btnComprar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.btnComprar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnComprar.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComprar.Location = new System.Drawing.Point(463, 272);
+            this.btnComprar.Location = new System.Drawing.Point(548, 270);
             this.btnComprar.Name = "btnComprar";
-            this.btnComprar.Size = new System.Drawing.Size(114, 50);
+            this.btnComprar.Size = new System.Drawing.Size(190, 50);
             this.btnComprar.TabIndex = 8;
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = false;
@@ -160,17 +160,18 @@ namespace Presentacion
             this.btnEmitirComprobante.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.btnEmitirComprobante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmitirComprobante.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEmitirComprobante.Location = new System.Drawing.Point(583, 272);
+            this.btnEmitirComprobante.Location = new System.Drawing.Point(548, 345);
             this.btnEmitirComprobante.Name = "btnEmitirComprobante";
             this.btnEmitirComprobante.Size = new System.Drawing.Size(190, 50);
             this.btnEmitirComprobante.TabIndex = 11;
             this.btnEmitirComprobante.Text = "Emitir Comprobante";
             this.btnEmitirComprobante.UseVisualStyleBackColor = false;
+            this.btnEmitirComprobante.Click += new System.EventHandler(this.btnEmitirComprobante_Click);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(81, 14);
+            this.dateTimePicker1.Location = new System.Drawing.Point(524, 25);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 12;
@@ -197,9 +198,9 @@ namespace Presentacion
             // txtNumeroFactura
             // 
             this.txtNumeroFactura.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroFactura.Location = new System.Drawing.Point(602, 5);
+            this.txtNumeroFactura.Location = new System.Drawing.Point(624, 70);
             this.txtNumeroFactura.Name = "txtNumeroFactura";
-            this.txtNumeroFactura.Size = new System.Drawing.Size(114, 29);
+            this.txtNumeroFactura.Size = new System.Drawing.Size(100, 29);
             this.txtNumeroFactura.TabIndex = 16;
             // 
             // label1
@@ -207,7 +208,7 @@ namespace Presentacion
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(444, 9);
+            this.label1.Location = new System.Drawing.Point(462, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 21);
             this.label1.TabIndex = 17;
@@ -216,7 +217,7 @@ namespace Presentacion
             // btnSalir
             // 
             this.btnSalir.Image = global::Presentacion.Properties.Resources.delete_10023765;
-            this.btnSalir.Location = new System.Drawing.Point(763, 5);
+            this.btnSalir.Location = new System.Drawing.Point(754, 12);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(29, 24);
             this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -227,7 +228,7 @@ namespace Presentacion
             // btnVolverAtras
             // 
             this.btnVolverAtras.Image = global::Presentacion.Properties.Resources.left_arrow_10068022;
-            this.btnVolverAtras.Location = new System.Drawing.Point(12, 5);
+            this.btnVolverAtras.Location = new System.Drawing.Point(12, 12);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(44, 37);
             this.btnVolverAtras.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

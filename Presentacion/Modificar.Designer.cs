@@ -319,7 +319,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Modificar";
             this.Text = "Modificar";
-            this.Load += new System.EventHandler(this.Modificar_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.btnVolver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

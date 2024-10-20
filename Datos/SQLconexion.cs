@@ -388,6 +388,91 @@ namespace Datos
             }
 
         }
+
+
+
+
+        /**********************************************************************************************/
+
+        /***********************************************************************************************/
+
+        public void AgregarComprobante(int numeroFactura, DateTime fecha, int idEmpleado, float montoTotal)
+        {
+            try
+            {
+                Miconexion.Open();
+
+                // Ajustamos la consulta SQL con los cambios requeridos
+                string query = "INSERT INTO Comprobante (Tipo, Numero, Fecha, Empleado, Cliente, Monto) " +
+                               "VALUES (@Tipo, @NumeroFactura, @Fecha, @IdEmpleado, @Cliente, @MontoTotal)";
+
+                SqlCommand command = new SqlCommand(query, Miconexion);
+
+                // Asignar siempre el valor de 1 para el tipo
+                command.Parameters.AddWithValue("@Tipo", 1);
+
+                // Usamos el número de factura proporcionado por el parámetro
+                command.Parameters.AddWithValue("@NumeroFactura", numeroFactura);
+
+                // Asignar los valores para la fecha, empleado y monto total
+                command.Parameters.AddWithValue("@Fecha", fecha);
+                command.Parameters.AddWithValue("@IdEmpleado", idEmpleado);
+
+                // Asignar el campo cliente como nulo ya que no se maneja cliente
+                command.Parameters.AddWithValue("@Cliente", numeroFactura);
+
+                // Monto total
+                command.Parameters.AddWithValue("@MontoTotal", montoTotal);
+
+                // Ejecutar el comando SQL
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al guardar el comprobante: " + ex.Message);
+            }
+            finally
+            {
+                if (Miconexion.State == ConnectionState.Open)
+                {
+                    Miconexion.Close();
+                }
+            }
+        }
+
+
+        
+
+
+        // Método para actualizar el stock de un producto
+        public void ModificarUnproducto(int codigo, string nombreProducto, string nombreCorto, float precioCosto, float stockNuevo, float stockMinimo, float porcentajeGanancia)
+        {
+            try
+            {
+                Miconexion.Open();
+                string query = "UPDATE Producto SET Stock = @StockNuevo WHERE Codigo = @Codigo";
+                SqlCommand command = new SqlCommand(query, Miconexion);
+                command.Parameters.AddWithValue("@StockNuevo", stockNuevo);
+                command.Parameters.AddWithValue("@Codigo", codigo);
+
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al modificar el producto: " + ex.Message);
+            }
+            finally
+            {
+                if (Miconexion.State == ConnectionState.Open)
+                {
+                    Miconexion.Close();
+                }
+            }
+        }
+
+
+
+
     } 
  }
 

@@ -71,9 +71,6 @@ namespace Presentacion
         
         }
 
-        private void Modificar_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

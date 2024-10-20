@@ -39,26 +39,31 @@ namespace Presentacion
 
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
+       
+
+      
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            ABMProductos volver = new ABMProductos(empleadoIniciado);
-            volver.Show();
-            this.Hide();
+           
+                ABMProductos volver = new ABMProductos(empleadoIniciado);
+                volver.Show();
+                this.Hide();
+            
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnModificar_Click(object sender, EventArgs e)
         {
-                try
-                {
-                    SQLconexionNegocio co = new SQLconexionNegocio();
-                    co.ModificarUnproducto(int.Parse(txtCodigo.Text), txtNombreProducto.Text, txtNombreCorto.Text, float.Parse(txtPrecioCosto.Text), float.Parse(txtStock.Text), float.Parse(txtStockMinimo.Text), int.Parse(txtPorcentajeGanancias.Text));
-                    MessageBox.Show("Producto modificado correctamente.");
-                }
-                catch (Exception a)
-                {
-                    MessageBox.Show(a.Message);
-                }
-            
+            try
+            {
+                SQLconexionNegocio co = new SQLconexionNegocio();
+                co.ModificarUnproducto(int.Parse(txtCodigo.Text), txtNombreProducto.Text, txtNombreCorto.Text, float.Parse(txtPrecioCosto.Text), float.Parse(txtStock.Text), float.Parse(txtStockMinimo.Text), int.Parse(txtPorcentajeGanancias.Text));
+                MessageBox.Show("Producto modificado correctamente.");
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
 
 
         }

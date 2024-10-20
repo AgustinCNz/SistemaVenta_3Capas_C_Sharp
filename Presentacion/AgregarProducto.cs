@@ -20,12 +20,7 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-            ABMProductos volver = new ABMProductos(empleadoIniciado);
-            volver.Show();
-            this.Hide();
-        }
+     
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -53,6 +48,13 @@ namespace Presentacion
                     MessageBox.Show(a.Message);
                 }
             
+        }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            ABMProductos volver = new ABMProductos(empleadoIniciado);
+            volver.Show();
+            this.Hide();
         }
     }
 }

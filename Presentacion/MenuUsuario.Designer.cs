@@ -96,6 +96,7 @@
             this.btnVenta.TabIndex = 8;
             this.btnVenta.Text = "Venta De Producto";
             this.btnVenta.UseVisualStyleBackColor = false;
+            this.btnVenta.Click += new System.EventHandler(this.btnVenta_Click);
             // 
             // btnAdministrar
             // 
