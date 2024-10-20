@@ -122,9 +122,9 @@ namespace PP3capas
         {
             return cn.EliminarProducto(Codigo);
         }
-        public void ModificarUnproducto(int Codigo, string NombreProducto, string NombreCorto, float PrecioCosto, float Stock, float StockMinimo, int PorcentajeGanancias)
+        public void ModificarUnproducto(int Codigo, string NombreProducto, string NombreCorto, float precioCosto, float Stock, float StockMinimo, int PorcentajeGanancias)
         {
-            cn.ModificarProducto(Codigo, NombreProducto, NombreCorto, PrecioCosto, Stock, StockMinimo, PorcentajeGanancias);
+            cn.ModificarProducto(Codigo, NombreProducto, NombreCorto, precioCosto, Stock, StockMinimo, PorcentajeGanancias);
         }
         public Producto ObtenerProductoporCodigo(int Codigo)
         {
@@ -159,12 +159,15 @@ namespace PP3capas
             cn.CargarComprobante(Tipo, Numero, Fecha, Empleado, Cliente, Monto);
         }
 
+        public void AgregarComprobante(int numeroFactura, DateTime fecha, int idEmpleado, float montoTotal)
+        {
+            cn.AgregarComprobante(numeroFactura, fecha, idEmpleado, montoTotal);
+        }
 
 
 
 
 
-        
 
 
     }

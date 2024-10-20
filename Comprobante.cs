@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace PP3capas
 {
@@ -21,5 +22,7 @@ namespace PP3capas
             this.Monto = monto;
         }
     }
+
+ 
 
 }

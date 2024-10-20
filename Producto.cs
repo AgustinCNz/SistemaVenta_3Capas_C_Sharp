@@ -26,5 +26,10 @@ namespace PP3capas
             this.StockMinimo = stockMinimo;
             this.PorcentajeGanancia = porcentajeGanancia;
         }
+
+
+       
+
+
     }
 }
