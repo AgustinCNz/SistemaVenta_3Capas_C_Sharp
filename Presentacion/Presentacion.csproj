@@ -171,7 +171,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PP3capas\PP3capas.csproj">
+    <ProjectReference Include="..\PP3capas.csproj">
       <Project>{428647C5-9D5C-48D1-9A7E-68BCD6073DDA}</Project>
       <Name>PP3capas</Name>
     </ProjectReference>

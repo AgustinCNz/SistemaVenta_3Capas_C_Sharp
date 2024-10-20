@@ -49,11 +49,5 @@
     <Compile Include="SQLconexionNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{60AFBC44-04B9-4181-8066-2696A045C6C4}</Project>
-      <Name>Datos</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
