@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PP3capas
 {
     public class Cliente
-    {
+    { 
         public int codigo {  get; set; }
         public string Apellido { get; set; }
         public string Nombre { get; set; }

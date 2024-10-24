@@ -1,0 +1,246 @@
+﻿using PP3capas;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Xml.Linq;
+
+namespace Presentacion
+{
+    public partial class CompraProducto : Form
+    {
+
+        private List<Producto> ListaProductos = new List<Producto>();
+        private List<int> cantidades = new List<int>();
+        Empleado empleadoIniciado;
+
+        public CompraProducto(Empleado e)
+        {
+            this.empleadoIniciado = e;
+            InitializeComponent();
+        }
+
+        private void CompraProducto_Load(object sender, EventArgs e)
+        {
+            SQLconexionNegocio con = new SQLconexionNegocio();
+            dataGridView1.DataSource = con.CargarProducto();
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            MenuUsuario volver = new MenuUsuario(empleadoIniciado);
+            volver.Show();
+            this.Hide();
+        }
+
+
+
+         private void txtCodigoLeave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!txtCodigo.Text.Equals(""))
+                {
+                    SQLconexionNegocio co = new SQLconexionNegocio();
+                    Producto p = co.ObtenerProductoporCodigo(int.Parse(txtCodigo.Text));
+                    if (p!=null)
+                    {
+                        txtPrecio.Text = "" + p.PrecioCosto;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al cargar el producto");
+                    }
+                }
+               
+                
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Error al cargar el precio: {ex.Message}");
+            }
+
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                // Validar que el código de producto es válido
+                if (!int.TryParse(txtCodigo.Text, out int codigo))
+                {
+                    MessageBox.Show("El código de producto no es válido.");
+                    return;
+                }
+
+                // Obtener el producto
+                SQLconexionNegocio co = new SQLconexionNegocio();
+                Producto p = co.ObtenerProductoporCodigo(codigo);
+                if (p == null)
+                {
+                    MessageBox.Show("Producto no encontrado.");
+                    return;
+                }
+
+                // Validar cantidad
+                if (!int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0)
+                {
+                    MessageBox.Show("La cantidad debe ser un número positivo.");
+                    return;
+                }
+
+                // Verificar si ya fue agregado
+                bool existe = ListaProductos.Any(prod => prod.codigo == p.codigo);
+                if (existe)
+                {
+                    MessageBox.Show("Este producto ya fue cargado");
+                    return;
+                }
+
+                // Obtener el precio
+                if (!float.TryParse(txtPrecio.Text, out float precio))
+                {
+                    MessageBox.Show("El precio no es válido.");
+                    return;
+                }
+
+
+                // Agregar producto y cantidad a la lista
+                ListaProductos.Add(p);
+                cantidades.Add(cantidad);
+
+                // Crear la visualización en el ListBox
+                string item = $"{p.NombreProducto} -  Cantidad: {cantidad} - Precio: {precio}  - Factura: {txtFactura.Text}";
+                lstCompra.Items.Add(item);
+
+
+                txtCodigo.Clear();
+                txtCantidad.Clear();
+                txtPrecio.Clear();
+
+            }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al agregar la compra: {ex.Message}");
+                }
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+            int index=0;
+            int i = 0;
+            foreach (var pro in ListaProductos)
+                {
+
+                
+                if (pro.NombreProducto.Equals(lstCompra.SelectedItem))
+                {
+                    index = i;
+                }
+                i++;
+            }
+
+                ListaProductos.RemoveAt(index);
+                cantidades.RemoveAt(index);
+                lstCompra.Items.Remove(lstCompra.SelectedItem);
+
+            }
+            catch (Exception es){
+                MessageBox.Show(""+es);
+
+            }
+        }
+
+        public double calcularPrecioTotal() {
+            int i = 0;
+            double  total = 0;
+            foreach (var pro in ListaProductos)
+            {
+                total = total + pro.PrecioCosto * cantidades[i];
+                i++;
+            }
+            return total;
+        }
+
+
+
+            private void btnEmitirComprobante_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crear instancia de la capa de negocio y conexión
+                SQLconexionNegocio con = new SQLconexionNegocio();
+                Comprobante comprobanteNegocio = new Comprobante();
+
+                if (txtFactura.Text.Equals(""))
+                {
+                    MessageBox.Show("Cargue el numero de factura");
+                    return;
+                }
+                
+                // Modificar los productos (actualizar stock)
+                int i = 0;
+                foreach (var pro in ListaProductos)
+                {
+                    float stockNuevo = pro.Stock + cantidades[i];
+                    con.ModificarUnproducto(pro.codigo, pro.NombreProducto, pro.NombreCorto, pro.PrecioCosto, stockNuevo, pro.StockMinimo, pro.PorcentajeGanancia);
+                    i++;
+                }
+  
+                // Actualizar la tabla
+                dataGridView1.DataSource = con.CargarProducto();
+
+                // Convertir cantidades a float si es necesario
+                List<float> cantidadesFloat = cantidades.Select(c => (float)c).ToList();
+
+                // Calcular el monto total
+                float montoTotal = comprobanteNegocio.CalcularTotal(ListaProductos, cantidadesFloat);
+
+                // Guardar el comprobante en la base de datos
+                DateTime fechaHoy = DateTime.Now;
+                con.AgregarUnmonto(2, int.Parse(txtFactura.Text), fechaHoy, empleadoIniciado.ID, 0, montoTotal);
+                // Mostrar un mensaje de éxito
+                string mensaje = $"Comprobante emitido:\n" +
+                                 $"Numero de Factura: {txtFactura.Text}\n" +
+                                 $"Fecha: {fechaHoy.ToString("MM/dd/yyyy")}\n" +
+                                 $"Empleado: {empleadoIniciado.ID}\n" +
+                                 $"Monto total: {montoTotal}";
+
+                MessageBox.Show(mensaje, "Información del Comprobante", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // Limpiar los campos y listas
+                txtCantidad.Clear();
+                txtCodigo.Clear();
+                txtFactura.Clear();
+                txtPrecio.Clear();
+                lstCompra.Items.Clear();
+
+                ListaProductos = new List<Producto>();
+                cantidades = new List<int>();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message + "\n" + ex.StackTrace);
+            }
+
+        }
+    }
+}

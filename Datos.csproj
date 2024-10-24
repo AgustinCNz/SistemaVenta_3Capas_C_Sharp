@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{428647C5-9D5C-48D1-9A7E-68BCD6073DDA}</ProjectGuid>
+    <ProjectGuid>{60AFBC44-04B9-4181-8066-2696A045C6C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PP3capas</RootNamespace>
-    <AssemblyName>PP3capas</AssemblyName>
+    <RootNamespace>Datos</RootNamespace>
+    <AssemblyName>Datos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,19 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Comprobante.cs" />
-    <Compile Include="Empleado.cs" />
-    <Compile Include="MatameDespuesxd.cs" />
-    <Compile Include="Producto.cs" />
-    <Compile Include="SQLconexionNegocio.cs" />
+    <Compile Include="SQLconexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{60AFBC44-04B9-4181-8066-2696A045C6C4}</Project>
-      <Name>Datos</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
