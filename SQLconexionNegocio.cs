@@ -4,7 +4,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
@@ -70,27 +69,55 @@ namespace PP3capas
         public Empleado ObtenerUsuarioPorId(int id)
         {
             string[] Datosempleado = cn.BuscarUsuarioPorId(id);
-
-             try
+            if (Datosempleado == null)
             {
-                Empleado empleado2 = new Empleado(
-                    int.Parse(Datosempleado[0]),
-                    int.Parse(Datosempleado[1]),
-                    Datosempleado[2],
-                    Datosempleado[3],
-                    Datosempleado[4],
-                    DateTime.Parse(Datosempleado[5]),
-                    Datosempleado[6],
-                    Datosempleado[7],
-                    Datosempleado[8]
-                );
-                
-                return empleado2;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al convertir los datos del empleado: " + ex.Message);
+                Console.WriteLine("Selecciona una ID");
                 return null;
+               /* try
+                {
+                    Empleado empleado2 = new Empleado(
+                        int.Parse(Datosempleado[0]),
+                        int.Parse(Datosempleado[1]),
+                        Datosempleado[2],
+                        Datosempleado[3],
+                        Datosempleado[4],
+                        DateTime.Parse(Datosempleado[5]),
+                        Datosempleado[6],
+                        Datosempleado[7],
+                        Datosempleado[8]
+                    );
+
+                    return empleado2;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al convertir los datos del empleado: " + ex.Message);
+                    return null;
+                }*/
+            }
+            else
+            {
+                try
+                {
+                    Empleado empleado2 = new Empleado(
+                        int.Parse(Datosempleado[0]),
+                        int.Parse(Datosempleado[1]),
+                        Datosempleado[2],
+                        Datosempleado[3],
+                        Datosempleado[4],
+                        DateTime.Parse(Datosempleado[5]),
+                        Datosempleado[6],
+                        Datosempleado[7],
+                        Datosempleado[8]
+                    );
+
+                    return empleado2;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Error al convertir los datos del empleado: " + ex.Message);
+                    return null;
+                }
             }
         }
 
@@ -122,7 +149,7 @@ namespace PP3capas
         {
             return cn.EliminarProducto(Codigo);
         }
-        public void ModificarUnproducto(int Codigo, string NombreProducto, string NombreCorto, float PrecioCosto, float Stock, float StockMinimo, int PorcentajeGanancias)
+        public void ModificarUnproducto(int Codigo, string NombreProducto, string NombreCorto, double PrecioCosto, float Stock, float StockMinimo, int PorcentajeGanancias)
         {
             cn.ModificarProducto(Codigo, NombreProducto, NombreCorto, PrecioCosto, Stock, StockMinimo, PorcentajeGanancias);
         }
@@ -132,6 +159,7 @@ namespace PP3capas
 
             try
             {
+                if (DatosProducto != null) { 
                 Producto producto2 = new Producto(
                     int.Parse(DatosProducto[0]),
                     DatosProducto[1],
@@ -139,10 +167,11 @@ namespace PP3capas
                    float.Parse(DatosProducto[3]),
                    float.Parse(DatosProducto[4]),
                    float.Parse(DatosProducto[5]),
-                    int.Parse(DatosProducto[6])
-                );
+                    int.Parse(DatosProducto[6]));
+                    return producto2;
+                }
 
-                return producto2;
+                return null;
             }
             catch (Exception ex)
             {
@@ -154,18 +183,39 @@ namespace PP3capas
         {
             return cn.ConsultarMovimientos();
         }
-        public void AgregarUnmonto(int Tipo, int Numero, DateTime Fecha, int Empleado, int Cliente, float Monto)
+        public void AgregarUnmonto(int Tipo, int Numero, DateTime Fecha, int Empleado, int Cliente, double Monto)
         {
             cn.CargarComprobante(Tipo, Numero, Fecha, Empleado, Cliente, Monto);
         }
+        public Cliente BuscarCliente(int codigocliente)
+        {
+            string[] DatosCliente = cn.consultarCliente(codigocliente);
+
+            try
+            {
+                if (DatosCliente != null)
+                {
+                    Cliente cliente = new Cliente(
+                       int.Parse(DatosCliente[0]),
+                        DatosCliente[1],
+                        DatosCliente[2],
+                        DatosCliente[3],
+                        DateTime.Parse(DatosCliente[4]),
+                       int.Parse(DatosCliente[5]));
+                    return cliente;
+                }
 
 
-
-
-
-
-        
-
-
+                return null;
+                 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al convertir los datos del cliente: " + ex.Message);
+                return null;
+            }
+        } 
     }
+
 }
+

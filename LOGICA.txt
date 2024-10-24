@@ -1,0 +1,296 @@
+Datos: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','2024-10-19','12','0','2150,93')
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','66','19/10/2024 00:00:00','12','0','1000,23')
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','19/10/2024 00:00:00','12','0','1000,23')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:8849fca6-741d-45d6-9dbf-cd7368350fdd
+Error Number:241,State:1,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','19/10/2024 00:00:00','12','0','21509,3')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:e8ba1296-bdc8-419f-beb8-9a5453b00a43
+Error Number:241,State:1,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','1','10/10/1200 00:00:00','12','0','1000,23')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:ae99ed65-8ec4-40d6-bffd-66645e5e289e
+Error Number:8114,State:5,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','10/10/1200 00:00:00','12','0','2150,93')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:fb716b33-d958-491d-a359-860ad6e0ce8b
+Error Number:8114,State:5,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','10/10/1200 00:00:00','12','0','2150,93')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:784c2573-a3ba-4cc3-8437-48fe39b3f0f3
+Error Number:8114,State:5,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','1','10/10/1200 00:00:00','12','0','11153')
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','10/10/1200 00:00:00','12','0','1000,23')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:8d8dfb31-e3e0-447c-beb9-d36d995d15c0
+Error Number:8114,State:5,Class:16
+QUERRY: insert into Comprobante (Tipo,Numero, Fecha, Empleado, Cliente, Monto) values ('2','666','10/10/1200 00:00:00','12','0','1000,23')
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 380
+ClientConnectionId:fa97a5af-9b72-4efa-8151-d6b86334706c
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:a74890fa-0bdb-4c48-811c-59d4a7e0e930
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:df64695c-863b-4626-9eca-ff21ba1dd8d5
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:11aeece2-737c-449c-a9d6-8ec2d4c46522
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:9224aaf1-728f-4819-80d8-3b9a5eee5627
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:c824a129-99ef-43b7-b7ef-7186bf0e89f5
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Error converting data type varchar to numeric.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:f6223564-6c9b-4215-966d-cf6ad26f2670
+Error Number:8114,State:5,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 392
+ClientConnectionId:58ebb95e-cd48-4473-8452-61c7f9b60104
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 392
+ClientConnectionId:346c87f0-7a28-4e82-9088-f60e0f10a087
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 393
+ClientConnectionId:8823b462-4283-4c63-b994-ff55006d19e3
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Single Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:db218f75-c1d0-472d-8ce3-5974fcbba2c6
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:a5bbcf2c-963f-4c8c-89d3-b3039e06a366
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:68b3c764-e21e-4783-b3dd-ab10fe432a67
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:2dce11c2-d6be-4d83-a5e8-3722d47fc6b3
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:f0020374-3023-447b-9336-85418f308211
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 387
+ClientConnectionId:b393f1cc-c465-420a-a61e-7db58e91fb83
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): There are fewer columns in the INSERT statement than values specified in the VALUES clause. The number of values in the VALUES clause must match the number of columns specified in the INSERT statement.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 388
+ClientConnectionId:a9909c57-9544-4b42-8ecb-949efe97bd05
+Error Number:110,State:1,Class:15
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 389
+ClientConnectionId:f3000b66-3a48-438c-937a-009de8c9a322
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 389
+ClientConnectionId:1feaf289-8b04-4394-8ba9-3872262b0ac3
+Error Number:241,State:1,Class:16
+EXCEPCION: System.Data.SqlClient.SqlException (0x80131904): Conversion failed when converting date and/or time from character string.
+   en System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   en System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   en System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   en System.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean async, Int32 timeout, Boolean asyncWrite)
+   en System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   en System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   en Datos.SQLconexion.CargarComprobante(Int32 Tipo, Int32 Numero, String Fecha, Int32 Empleado, Int32 Cliente, Double Monto) en C:\Users\ramir\OneDrive\Escritorio\3capas\Datos\SQLconexion.cs:línea 389
+ClientConnectionId:72431e6c-d288-4077-acb3-e8d29324fcd9
+Error Number:241,State:1,Class:16
