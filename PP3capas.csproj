@@ -43,8 +43,8 @@
   <ItemGroup>
     <Compile Include="Cliente.cs" />
     <Compile Include="Comprobante.cs" />
-    <Compile Include="EliminameLuego.cs" />
     <Compile Include="Empleado.cs" />
+    <Compile Include="MatameDespuesxd.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="SQLconexionNegocio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

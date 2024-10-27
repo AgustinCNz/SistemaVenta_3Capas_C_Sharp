@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PP3capas
 {
+    
     public class Empleado
     {
         public int ID {  get; set; }

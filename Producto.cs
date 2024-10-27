@@ -16,7 +16,9 @@ namespace PP3capas
         public float StockMinimo { get; set; }
         public int PorcentajeGanancia { get; set; }
 
-        public Producto(int codigo, string nombreProducto, string nombreCorto, float precioCosto, float stock, float stockMinimo, int porcentajeGanancia)
+        public float PrecioVenta { get; set; }
+
+        public Producto(int codigo, string nombreProducto, string nombreCorto, float precioCosto, float stock, float stockMinimo, int porcentajeGanancia, float precioVenta)
         {
             this.codigo = codigo;
             this.NombreProducto = nombreProducto;
@@ -25,6 +27,7 @@ namespace PP3capas
             this.Stock = stock;
             this.StockMinimo = stockMinimo;
             this.PorcentajeGanancia = porcentajeGanancia;
+            this.PrecioVenta = precioVenta;
         }
     }
 }
